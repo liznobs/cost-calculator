@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Order Cost Calculator</h1>
+        </div>
+        <form id="orderForm">
+            <!-- Cost and Mark-up Price -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cost">Cost:</label>
+                    <input type="number" id="cost" name="cost" required>
+                </div>
+                <div class="form-group">
+                    <label for="markupPrice">Mark-up Price:</label>
+                    <input type="text" id="markupPrice" name="markupPrice" readonly>
+                </div>
+            </div>
+
+            <!-- Product Type and Broker Fee -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="productType">Product Type:</label>
+                    <select id="productType" name="productType">
+                        <option value="">Select...</option>
+                        <option value="Guest Post">Guest Post</option>
+                        <option value="Editorial Link">Editorial Link</option>
+                        <option value="SOC">SOC</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="brokerFee">Broker Fee:</label>
+                    <input type="text" id="brokerFee" name="brokerFee" readonly>
+                </div>
+            </div>
+
+            <!-- Second Link and Retail -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="secondLinkCost">Second Link Cost:</label>
+                    <input type="number" id="secondLinkCost" name="secondLinkCost">
+                </div>
+                <div class="form-group">
+                    <label for="secondLinkRetail">Second Link Retail:</label>
+                    <input type="text" id="secondLinkRetail" name="secondLinkRetail" readonly>
+                </div>
+            </div>
+
+            <!-- Content Length and Fee -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contentLength">Content Length:</label>
+                    <select id="contentLength" name="contentLength">
+                        <option value="">Select...</option>
+                        <option value="750">750 words</option>
+                        <option value="1000">1000 words</option>
+                        <option value="1500">1500 words</option>
+                        <option value="2000">2000 words</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contentLengthFee">Content Length Fee:</label>
+                    <input type="text" id="contentLengthFee" name="contentLengthFee" readonly>
+                </div>
+            </div>
+
+            <!-- Content Review and Fee -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contentReview">Content Review:</label>
+                    <select id="contentReview" name="contentReview">
+                        <option value="">Select...</option>
+                        <option value="No Content Review">No Content Review</option>
+                        <option value="With Content Review">With Content Review</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contentReviewFee">Content Review Fee:</label>
+                    <input type="text" id="contentReviewFee" name="contentReviewFee" readonly>
+                </div>
+            </div>
+
+            <!-- YouTube Link and Retail -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="youtubeLinkCost">YouTube Link Cost:</label>
+                    <input type="number" id="youtubeLinkCost" name="youtubeLinkCost">
+                </div>
+                <div class="form-group">
+                    <label for="youtubeLinkRetail">YouTube Link Retail:</label>
+                    <input type="text" id="youtubeLinkRetail" name="youtubeLinkRetail" readonly>
+                </div>
+            </div>
+
+            <!-- Supporting Link and Retail -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="supportingLinkCost">Supporting Link Cost:</label>
+                    <input type="number" id="supportingLinkCost" name="supportingLinkCost">
+                </div>
+                <div class="form-group">
+                    <label for="supportingLinkRetail">Supporting Link Retail:</label>
+                    <input type="text" id="supportingLinkRetail" name="supportingLinkRetail" readonly>
+                </div>
+            </div>
+
+            <!-- Stock Images and Cost -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="stockImages">Stock Images:</label>
+                    <select id="stockImages" name="stockImages">
+                        <option value="1-2 Images">1 - 2 Images</option>
+                        <option value="3-4 Images">3 - 4 Images</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stockImagesCost">Stock Images Cost:</label>
+                    <input type="text" id="stockImagesCost" name="stockImagesCost" readonly>
+                </div>
+            </div>
+
+            <!-- Discount Section -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="discountType">Discount Type:</label>
+                    <select id="discountType" name="discountType">
+                        <option value="percentage">Percentage</option>
+                        <option value="amount">Amount</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="discountValue">Discount Value:</label>
+                    <input type="number" id="discountValue" name="discountValue" min="0">
+                </div>
+            </div>
+
+            <!-- Bank Fee -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bankFee">Bank Fee:</label>
+                    <input type="number" id="bankFee" name="bankFee">
+                </div>
+            </div>
+
+            <!-- Order Total Display -->
+            <div class="order-total">
+                <span id="orderTotal">Order Total: $0.00</span>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
